@@ -1,5 +1,6 @@
 package net.kegui.start.controller;
 
+import cn.dev33.satoken.stp.StpUtil;
 import net.kegui.framework.core.api.annotation.OriginalResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -30,4 +31,17 @@ public class TestController {
     public Object testDb(){
         return jdbcTemplate.queryForList("select 1;");
     }
+
+    // 未登录测试
+    @GetMapping("/noLogin")
+    public Object noLogin(){
+        return StpUtil.isLogin();
+    }
+
+    // 登录测试
+    @GetMapping("/login")
+    public Object login(){
+        return "do sth...";
+    }
+
 }

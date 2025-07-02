@@ -1,5 +1,6 @@
 package net.kegui.framework.core.api.exception;
 
+import cn.dev33.satoken.exception.NotLoginException;
 import jakarta.servlet.ServletException;
 import net.kegui.framework.core.api.common.CommonResult;
 import org.slf4j.Logger;
@@ -63,5 +64,18 @@ public class RestExceptionHandler {
     public CommonResult<String> noHandlerFoundException(Exception e) {
         log.warn("资源未找到: {}", e.getMessage());
         return CommonResult.not_found();
+    }
+
+    /**
+     * 未登录访问需鉴权的资源
+     *
+     * @Param e
+     * @return 统一封装的响应结果
+     */
+    @ExceptionHandler(NotLoginException.class)
+    @ResponseStatus(HttpStatus.UNAUTHORIZED)
+    public CommonResult<String> unauthorized(NotLoginException e){
+        log.warn("未登录: {}", e.getMessage());
+        return CommonResult.unauthorized(e.getMessage(),null);
     }
 }

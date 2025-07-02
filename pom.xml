@@ -30,6 +30,7 @@
     <properties>
         <cc-admin.version>0.0.1-SNAPSHOT</cc-admin.version>
         <mybatis-plus.version>3.5.12</mybatis-plus.version>
+        <sa-token.version>1.44.0</sa-token.version>
         <dynamic-datasource.version>4.3.1</dynamic-datasource.version>
         <java.version>24</java.version>
         <spring-boot-dependencies.version>3.5.3</spring-boot-dependencies.version>
@@ -58,6 +59,13 @@
                 <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
                 <version>${mybatis-plus.version}</version>
             </dependency>
+            <!-- sa-token -->
+            <dependency>
+                <groupId>cn.dev33</groupId>
+                <artifactId>sa-token-spring-boot3-starter</artifactId>
+                <version>${sa-token.version}</version>
+            </dependency>
+
             <!-- framework -->
             <dependency>
                 <groupId>net.kegui</groupId>
@@ -67,6 +75,11 @@
             <dependency>
                 <groupId>net.kegui</groupId>
                 <artifactId>cc-framework-datasource</artifactId>
+                <version>${cc-admin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.kegui</groupId>
+                <artifactId>cc-framework-security</artifactId>
                 <version>${cc-admin.version}</version>
             </dependency>
         </dependencies>

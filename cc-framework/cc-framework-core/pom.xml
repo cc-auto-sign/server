@@ -38,10 +38,16 @@
             <artifactId>spring-boot-starter-undertow</artifactId>
         </dependency>
 
-        <!--Spring Context-->
+        <!--Spring Context -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
+        </dependency>
+
+        <!-- security -->
+        <dependency>
+            <groupId>net.kegui</groupId>
+            <artifactId>cc-framework-security</artifactId>
         </dependency>
 
     </dependencies>

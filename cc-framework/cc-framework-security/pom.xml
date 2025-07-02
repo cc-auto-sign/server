@@ -5,19 +5,18 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>net.kegui</groupId>
-        <artifactId>cc-admin</artifactId>
+        <artifactId>cc-framework</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>cc-framework</artifactId>
-    <packaging>pom</packaging>
-    <description>核心框架</description>
-    <modules>
-        <module>cc-framework-core</module>
-        <module>cc-framework-datasource</module>
-        <module>cc-framework-security</module>
-    </modules>
+    <artifactId>cc-framework-security</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-spring-boot3-starter</artifactId>
+        </dependency>
+    </dependencies>
     <properties>
         <maven.compiler.source>24</maven.compiler.source>
         <maven.compiler.target>24</maven.compiler.target>
