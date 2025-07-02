@@ -812,3 +812,145 @@ cn.dev33.satoken.exception.NotLoginException: 未能读取到有效 token
 2025-07-02 15:37:16,818 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:351 - master - Shutdown completed.
 2025-07-02 15:37:16,819 [SpringApplicationShutdownHook] INFO  [c.b.d.d.destroyer.DefaultDataSourceDestroyer] DefaultDataSourceDestroyer.java:98 - dynamic-datasource close the datasource named [master] success,
 2025-07-02 15:37:16,819 [SpringApplicationShutdownHook] INFO  [c.b.dynamic.datasource.DynamicRoutingDataSource] DynamicRoutingDataSource.java:219 - dynamic-datasource all closed success,bye
+2025-07-02 15:37:18,516 [main] INFO  [net.kegui.start.CCAdminApplication] StartupInfoLogger.java:53 - Starting CCAdminApplication using Java 24.0.1 with PID 27112 (D:\cc-admin\cc-admin-start\target\classes started by admin in D:\cc-admin)
+2025-07-02 15:37:18,518 [main] INFO  [net.kegui.start.CCAdminApplication] SpringApplication.java:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-02 15:37:18,796 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[net.kegui.start]' package. Please check your configuration.
+2025-07-02 15:37:18,975 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:111 - Tomcat initialized with port 8080 (http)
+2025-07-02 15:37:18,982 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-02 15:37:18,983 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:168 - Starting service [Tomcat]
+2025-07-02 15:37:18,983 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-02 15:37:19,005 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:168 - Initializing Spring embedded WebApplicationContext
+2025-07-02 15:37:19,005 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:301 - Root WebApplicationContext: initialization completed in 469 ms
+2025-07-02 15:37:19,047 [main] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:79 - master - Starting...
+2025-07-02 15:37:19,270 [main] INFO  [com.zaxxer.hikari.pool.HikariPool] HikariPool.java:575 - master - Added connection com.mysql.cj.jdbc.ConnectionImpl@6885ed19
+2025-07-02 15:37:19,272 [main] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:81 - master - Start completed.
+2025-07-02 15:37:19,272 [main] INFO  [c.b.dynamic.datasource.DynamicRoutingDataSource] DynamicRoutingDataSource.java:158 - dynamic-datasource - add a datasource named [master] success
+2025-07-02 15:37:19,272 [main] INFO  [c.b.dynamic.datasource.DynamicRoutingDataSource] DynamicRoutingDataSource.java:241 - dynamic-datasource initial loaded [1] datasource,primary datasource named [master]
+2025-07-02 15:37:19,365 [main] WARN  [o.s.web.servlet.resource.ResourceHandlerUtils] ResourceHandlerUtils.java:94 - Appended trailing slash to static resource location: classpath:/favicon.ico/
+2025-07-02 15:37:19,444 [main] INFO  [c.b.m.e.spring.MybatisPlusApplicationContextAware] MybatisPlusApplicationContextAware.java:40 - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@611f8234
+2025-07-02 15:37:19,484 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-02 15:37:19,491 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-07-02 15:37:19,494 [main] INFO  [net.kegui.start.CCAdminApplication] StartupInfoLogger.java:59 - Started CCAdminApplication in 1.229 seconds (process running for 1.457)
+2025-07-02 15:37:22,696 [http-nio-8080-exec-1] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-02 15:37:22,696 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:532 - Initializing Servlet 'dispatcherServlet'
+2025-07-02 15:37:22,697 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:554 - Completed initialization in 1 ms
+2025-07-02 15:37:22,750 [http-nio-8080-exec-2] WARN  [n.k.f.core.api.exception.RestExceptionHandler] RestExceptionHandler.java:78 - 未登录: 未能读取到有效 token
+2025-07-02 15:37:26,009 [http-nio-8080-exec-5] WARN  [n.k.f.core.api.exception.RestExceptionHandler] RestExceptionHandler.java:78 - 未登录: 未能读取到有效 token
+2025-07-02 15:53:42,229 [SpringApplicationShutdownHook] INFO  [o.s.boot.web.embedded.tomcat.GracefulShutdown] GracefulShutdown.java:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-02 15:53:42,233 [tomcat-shutdown] INFO  [o.s.boot.web.embedded.tomcat.GracefulShutdown] GracefulShutdown.java:76 - Graceful shutdown complete
+2025-07-02 15:53:42,234 [SpringApplicationShutdownHook] INFO  [c.b.dynamic.datasource.DynamicRoutingDataSource] DynamicRoutingDataSource.java:215 - dynamic-datasource start closing ....
+2025-07-02 15:53:42,235 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:349 - master - Shutdown initiated...
+2025-07-02 15:53:42,237 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:351 - master - Shutdown completed.
+2025-07-02 15:53:42,237 [SpringApplicationShutdownHook] INFO  [c.b.d.d.destroyer.DefaultDataSourceDestroyer] DefaultDataSourceDestroyer.java:98 - dynamic-datasource close the datasource named [master] success,
+2025-07-02 15:53:42,237 [SpringApplicationShutdownHook] INFO  [c.b.dynamic.datasource.DynamicRoutingDataSource] DynamicRoutingDataSource.java:219 - dynamic-datasource all closed success,bye
+2025-07-02 15:53:43,896 [main] INFO  [net.kegui.start.CCAdminApplication] StartupInfoLogger.java:53 - Starting CCAdminApplication using Java 24.0.1 with PID 28228 (D:\cc-admin\cc-admin-start\target\classes started by admin in D:\cc-admin)
+2025-07-02 15:53:43,897 [main] INFO  [net.kegui.start.CCAdminApplication] SpringApplication.java:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-02 15:53:44,170 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[net.kegui.start]' package. Please check your configuration.
+2025-07-02 15:53:44,339 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:111 - Tomcat initialized with port 8080 (http)
+2025-07-02 15:53:44,345 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-02 15:53:44,345 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:168 - Starting service [Tomcat]
+2025-07-02 15:53:44,346 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-02 15:53:44,366 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:168 - Initializing Spring embedded WebApplicationContext
+2025-07-02 15:53:44,366 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:301 - Root WebApplicationContext: initialization completed in 449 ms
+2025-07-02 15:53:44,408 [main] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:79 - master - Starting...
+2025-07-02 15:53:44,603 [main] INFO  [com.zaxxer.hikari.pool.HikariPool] HikariPool.java:575 - master - Added connection com.mysql.cj.jdbc.ConnectionImpl@37e7c4cc
+2025-07-02 15:53:44,603 [main] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:81 - master - Start completed.
+2025-07-02 15:53:44,604 [main] INFO  [c.b.dynamic.datasource.DynamicRoutingDataSource] DynamicRoutingDataSource.java:158 - dynamic-datasource - add a datasource named [master] success
+2025-07-02 15:53:44,604 [main] INFO  [c.b.dynamic.datasource.DynamicRoutingDataSource] DynamicRoutingDataSource.java:241 - dynamic-datasource initial loaded [1] datasource,primary datasource named [master]
+2025-07-02 15:53:44,694 [main] WARN  [o.s.web.servlet.resource.ResourceHandlerUtils] ResourceHandlerUtils.java:94 - Appended trailing slash to static resource location: classpath:/favicon.ico/
+2025-07-02 15:53:44,770 [main] INFO  [c.b.m.e.spring.MybatisPlusApplicationContextAware] MybatisPlusApplicationContextAware.java:40 - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@754777cd
+2025-07-02 15:53:44,809 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-02 15:53:44,816 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-07-02 15:53:44,820 [main] INFO  [net.kegui.start.CCAdminApplication] StartupInfoLogger.java:59 - Started CCAdminApplication in 1.174 seconds (process running for 1.405)
+2025-07-02 15:53:59,405 [SpringApplicationShutdownHook] INFO  [o.s.boot.web.embedded.tomcat.GracefulShutdown] GracefulShutdown.java:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-02 15:53:59,407 [tomcat-shutdown] INFO  [o.s.boot.web.embedded.tomcat.GracefulShutdown] GracefulShutdown.java:76 - Graceful shutdown complete
+2025-07-02 15:53:59,409 [SpringApplicationShutdownHook] INFO  [c.b.dynamic.datasource.DynamicRoutingDataSource] DynamicRoutingDataSource.java:215 - dynamic-datasource start closing ....
+2025-07-02 15:53:59,409 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:349 - master - Shutdown initiated...
+2025-07-02 15:53:59,411 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:351 - master - Shutdown completed.
+2025-07-02 15:53:59,411 [SpringApplicationShutdownHook] INFO  [c.b.d.d.destroyer.DefaultDataSourceDestroyer] DefaultDataSourceDestroyer.java:98 - dynamic-datasource close the datasource named [master] success,
+2025-07-02 15:53:59,411 [SpringApplicationShutdownHook] INFO  [c.b.dynamic.datasource.DynamicRoutingDataSource] DynamicRoutingDataSource.java:219 - dynamic-datasource all closed success,bye
+2025-07-02 15:54:01,286 [main] INFO  [net.kegui.start.CCAdminApplication] StartupInfoLogger.java:53 - Starting CCAdminApplication using Java 24.0.1 with PID 28268 (D:\cc-admin\cc-admin-start\target\classes started by admin in D:\cc-admin)
+2025-07-02 15:54:01,287 [main] INFO  [net.kegui.start.CCAdminApplication] SpringApplication.java:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-02 15:54:01,562 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[net.kegui.start]' package. Please check your configuration.
+2025-07-02 15:54:01,737 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:111 - Tomcat initialized with port 8080 (http)
+2025-07-02 15:54:01,742 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-02 15:54:01,744 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:168 - Starting service [Tomcat]
+2025-07-02 15:54:01,744 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-02 15:54:01,764 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:168 - Initializing Spring embedded WebApplicationContext
+2025-07-02 15:54:01,764 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:301 - Root WebApplicationContext: initialization completed in 457 ms
+2025-07-02 15:54:01,806 [main] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:79 - master - Starting...
+2025-07-02 15:54:02,001 [main] INFO  [com.zaxxer.hikari.pool.HikariPool] HikariPool.java:575 - master - Added connection com.mysql.cj.jdbc.ConnectionImpl@6aae0e6f
+2025-07-02 15:54:02,002 [main] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:81 - master - Start completed.
+2025-07-02 15:54:02,002 [main] INFO  [c.b.dynamic.datasource.DynamicRoutingDataSource] DynamicRoutingDataSource.java:158 - dynamic-datasource - add a datasource named [master] success
+2025-07-02 15:54:02,002 [main] INFO  [c.b.dynamic.datasource.DynamicRoutingDataSource] DynamicRoutingDataSource.java:241 - dynamic-datasource initial loaded [1] datasource,primary datasource named [master]
+2025-07-02 15:54:02,095 [main] WARN  [o.s.web.servlet.resource.ResourceHandlerUtils] ResourceHandlerUtils.java:94 - Appended trailing slash to static resource location: classpath:/favicon.ico/
+2025-07-02 15:54:02,172 [main] INFO  [c.b.m.e.spring.MybatisPlusApplicationContextAware] MybatisPlusApplicationContextAware.java:40 - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7de0c6ae
+2025-07-02 15:54:02,209 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-02 15:54:02,216 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-07-02 15:54:02,219 [main] INFO  [net.kegui.start.CCAdminApplication] StartupInfoLogger.java:59 - Started CCAdminApplication in 1.189 seconds (process running for 1.421)
+2025-07-02 15:54:06,968 [http-nio-8080-exec-1] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-02 15:54:06,968 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:532 - Initializing Servlet 'dispatcherServlet'
+2025-07-02 15:54:06,968 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:554 - Completed initialization in 0 ms
+2025-07-02 15:54:07,021 [http-nio-8080-exec-3] WARN  [n.k.f.core.api.exception.RestExceptionHandler] RestExceptionHandler.java:78 - 未登录: 未按照指定前缀提交 token，prefix=Bearer
+2025-07-02 15:57:42,629 [SpringApplicationShutdownHook] INFO  [o.s.boot.web.embedded.tomcat.GracefulShutdown] GracefulShutdown.java:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-02 15:57:42,631 [tomcat-shutdown] INFO  [o.s.boot.web.embedded.tomcat.GracefulShutdown] GracefulShutdown.java:76 - Graceful shutdown complete
+2025-07-02 15:57:42,633 [SpringApplicationShutdownHook] INFO  [c.b.dynamic.datasource.DynamicRoutingDataSource] DynamicRoutingDataSource.java:215 - dynamic-datasource start closing ....
+2025-07-02 15:57:42,633 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:349 - master - Shutdown initiated...
+2025-07-02 15:57:42,635 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:351 - master - Shutdown completed.
+2025-07-02 15:57:42,635 [SpringApplicationShutdownHook] INFO  [c.b.d.d.destroyer.DefaultDataSourceDestroyer] DefaultDataSourceDestroyer.java:98 - dynamic-datasource close the datasource named [master] success,
+2025-07-02 15:57:42,636 [SpringApplicationShutdownHook] INFO  [c.b.dynamic.datasource.DynamicRoutingDataSource] DynamicRoutingDataSource.java:219 - dynamic-datasource all closed success,bye
+2025-07-02 15:57:43,683 [main] INFO  [net.kegui.start.CCAdminApplication] StartupInfoLogger.java:53 - Starting CCAdminApplication using Java 24.0.1 with PID 27740 (D:\cc-admin\cc-admin-start\target\classes started by admin in D:\cc-admin)
+2025-07-02 15:57:43,684 [main] INFO  [net.kegui.start.CCAdminApplication] SpringApplication.java:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-02 15:57:43,951 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[net.kegui.start]' package. Please check your configuration.
+2025-07-02 15:57:44,119 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:111 - Tomcat initialized with port 8080 (http)
+2025-07-02 15:57:44,126 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-02 15:57:44,127 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:168 - Starting service [Tomcat]
+2025-07-02 15:57:44,127 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-02 15:57:44,150 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:168 - Initializing Spring embedded WebApplicationContext
+2025-07-02 15:57:44,150 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:301 - Root WebApplicationContext: initialization completed in 445 ms
+2025-07-02 15:57:44,191 [main] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:79 - master - Starting...
+2025-07-02 15:57:44,390 [main] INFO  [com.zaxxer.hikari.pool.HikariPool] HikariPool.java:575 - master - Added connection com.mysql.cj.jdbc.ConnectionImpl@195113de
+2025-07-02 15:57:44,391 [main] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:81 - master - Start completed.
+2025-07-02 15:57:44,392 [main] INFO  [c.b.dynamic.datasource.DynamicRoutingDataSource] DynamicRoutingDataSource.java:158 - dynamic-datasource - add a datasource named [master] success
+2025-07-02 15:57:44,392 [main] INFO  [c.b.dynamic.datasource.DynamicRoutingDataSource] DynamicRoutingDataSource.java:241 - dynamic-datasource initial loaded [1] datasource,primary datasource named [master]
+2025-07-02 15:57:44,485 [main] WARN  [o.s.web.servlet.resource.ResourceHandlerUtils] ResourceHandlerUtils.java:94 - Appended trailing slash to static resource location: classpath:/favicon.ico/
+2025-07-02 15:57:44,562 [main] INFO  [c.b.m.e.spring.MybatisPlusApplicationContextAware] MybatisPlusApplicationContextAware.java:40 - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5e01a982
+2025-07-02 15:57:44,599 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-02 15:57:44,606 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-07-02 15:57:44,609 [main] INFO  [net.kegui.start.CCAdminApplication] StartupInfoLogger.java:59 - Started CCAdminApplication in 1.185 seconds (process running for 1.412)
+2025-07-02 15:59:05,671 [SpringApplicationShutdownHook] INFO  [o.s.boot.web.embedded.tomcat.GracefulShutdown] GracefulShutdown.java:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-02 15:59:05,674 [tomcat-shutdown] INFO  [o.s.boot.web.embedded.tomcat.GracefulShutdown] GracefulShutdown.java:76 - Graceful shutdown complete
+2025-07-02 15:59:05,675 [SpringApplicationShutdownHook] INFO  [c.b.dynamic.datasource.DynamicRoutingDataSource] DynamicRoutingDataSource.java:215 - dynamic-datasource start closing ....
+2025-07-02 15:59:05,677 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:349 - master - Shutdown initiated...
+2025-07-02 15:59:05,679 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:351 - master - Shutdown completed.
+2025-07-02 15:59:05,679 [SpringApplicationShutdownHook] INFO  [c.b.d.d.destroyer.DefaultDataSourceDestroyer] DefaultDataSourceDestroyer.java:98 - dynamic-datasource close the datasource named [master] success,
+2025-07-02 15:59:05,680 [SpringApplicationShutdownHook] INFO  [c.b.dynamic.datasource.DynamicRoutingDataSource] DynamicRoutingDataSource.java:219 - dynamic-datasource all closed success,bye
+2025-07-02 16:03:21,267 [main] INFO  [net.kegui.start.CCAdminApplication] StartupInfoLogger.java:53 - Starting CCAdminApplication using Java 24.0.1 with PID 1200 (D:\cc-admin\cc-admin-start\target\classes started by admin in D:\cc-admin)
+2025-07-02 16:03:21,268 [main] INFO  [net.kegui.start.CCAdminApplication] SpringApplication.java:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-02 16:03:21,540 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[net.kegui.start]' package. Please check your configuration.
+2025-07-02 16:03:21,710 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:111 - Tomcat initialized with port 8080 (http)
+2025-07-02 16:03:21,716 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-02 16:03:21,718 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:168 - Starting service [Tomcat]
+2025-07-02 16:03:21,718 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-02 16:03:21,739 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:168 - Initializing Spring embedded WebApplicationContext
+2025-07-02 16:03:21,740 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:301 - Root WebApplicationContext: initialization completed in 454 ms
+2025-07-02 16:03:21,781 [main] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:79 - master - Starting...
+2025-07-02 16:03:21,974 [main] INFO  [com.zaxxer.hikari.pool.HikariPool] HikariPool.java:575 - master - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e2445f6
+2025-07-02 16:03:21,975 [main] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:81 - master - Start completed.
+2025-07-02 16:03:21,976 [main] INFO  [c.b.dynamic.datasource.DynamicRoutingDataSource] DynamicRoutingDataSource.java:158 - dynamic-datasource - add a datasource named [master] success
+2025-07-02 16:03:21,976 [main] INFO  [c.b.dynamic.datasource.DynamicRoutingDataSource] DynamicRoutingDataSource.java:241 - dynamic-datasource initial loaded [1] datasource,primary datasource named [master]
+2025-07-02 16:03:22,070 [main] WARN  [o.s.web.servlet.resource.ResourceHandlerUtils] ResourceHandlerUtils.java:94 - Appended trailing slash to static resource location: classpath:/favicon.ico/
+2025-07-02 16:03:22,146 [main] INFO  [c.b.m.e.spring.MybatisPlusApplicationContextAware] MybatisPlusApplicationContextAware.java:40 - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2b52c0d6
+2025-07-02 16:03:22,187 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-02 16:03:22,195 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-07-02 16:03:22,198 [main] INFO  [net.kegui.start.CCAdminApplication] StartupInfoLogger.java:59 - Started CCAdminApplication in 1.196 seconds (process running for 1.452)
+2025-07-02 16:03:34,127 [http-nio-8080-exec-1] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-02 16:03:34,127 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:532 - Initializing Servlet 'dispatcherServlet'
+2025-07-02 16:03:34,127 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:554 - Completed initialization in 0 ms
+2025-07-02 16:03:40,103 [SpringApplicationShutdownHook] INFO  [o.s.boot.web.embedded.tomcat.GracefulShutdown] GracefulShutdown.java:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-02 16:03:40,104 [tomcat-shutdown] INFO  [o.s.boot.web.embedded.tomcat.GracefulShutdown] GracefulShutdown.java:76 - Graceful shutdown complete
+2025-07-02 16:03:40,107 [SpringApplicationShutdownHook] INFO  [c.b.dynamic.datasource.DynamicRoutingDataSource] DynamicRoutingDataSource.java:215 - dynamic-datasource start closing ....
+2025-07-02 16:03:40,108 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:349 - master - Shutdown initiated...
+2025-07-02 16:03:40,110 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:351 - master - Shutdown completed.
+2025-07-02 16:03:40,110 [SpringApplicationShutdownHook] INFO  [c.b.d.d.destroyer.DefaultDataSourceDestroyer] DefaultDataSourceDestroyer.java:98 - dynamic-datasource close the datasource named [master] success,
+2025-07-02 16:03:40,110 [SpringApplicationShutdownHook] INFO  [c.b.dynamic.datasource.DynamicRoutingDataSource] DynamicRoutingDataSource.java:219 - dynamic-datasource all closed success,bye

@@ -41,6 +41,7 @@ public class TestController {
     // 登录测试
     @GetMapping("/login")
     public Object login(){
+        StpUtil.login(10001);
         return "do sth...";
     }
 

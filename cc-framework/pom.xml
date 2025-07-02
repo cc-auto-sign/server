@@ -16,6 +16,7 @@
         <module>cc-framework-core</module>
         <module>cc-framework-datasource</module>
         <module>cc-framework-security</module>
+        <module>cc-framework-redis</module>
     </modules>
 
     <properties>

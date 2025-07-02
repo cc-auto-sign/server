@@ -65,6 +65,12 @@
                 <artifactId>sa-token-spring-boot3-starter</artifactId>
                 <version>${sa-token.version}</version>
             </dependency>
+            <!-- sa-token redis拓展 -->
+            <dependency>
+                <groupId>cn.dev33</groupId>
+                <artifactId>sa-token-redis-template</artifactId>
+                <version>${sa-token.version}</version>
+            </dependency>
 
             <!-- framework -->
             <dependency>
@@ -80,6 +86,11 @@
             <dependency>
                 <groupId>net.kegui</groupId>
                 <artifactId>cc-framework-security</artifactId>
+                <version>${cc-admin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.kegui</groupId>
+                <artifactId>cc-framework-redis</artifactId>
                 <version>${cc-admin.version}</version>
             </dependency>
         </dependencies>

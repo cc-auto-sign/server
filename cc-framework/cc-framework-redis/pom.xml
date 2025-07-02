@@ -9,25 +9,16 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>cc-framework-security</artifactId>
+    <artifactId>cc-framework-redis</artifactId>
 
     <dependencies>
+        <!-- 提供 Redis 连接池 -->
         <dependency>
-            <groupId>cn.dev33</groupId>
-            <artifactId>sa-token-spring-boot3-starter</artifactId>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
         </dependency>
-        <!-- Redis连接池 -->
-        <dependency>
-            <groupId>net.kegui</groupId>
-            <artifactId>cc-framework-redis</artifactId>
-        </dependency>
-        <!-- Sa-Token 整合 RedisTemplate -->
-        <dependency>
-            <groupId>cn.dev33</groupId>
-            <artifactId>sa-token-redis-template</artifactId>
-        </dependency>
-
     </dependencies>
+
     <properties>
         <maven.compiler.source>24</maven.compiler.source>
         <maven.compiler.target>24</maven.compiler.target>
