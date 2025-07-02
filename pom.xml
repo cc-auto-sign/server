@@ -29,6 +29,8 @@
 
     <properties>
         <cc-admin.version>0.0.1-SNAPSHOT</cc-admin.version>
+        <mybatis-plus.version>3.5.12</mybatis-plus.version>
+        <dynamic-datasource.version>4.3.1</dynamic-datasource.version>
         <java.version>24</java.version>
         <spring-boot-dependencies.version>3.5.3</spring-boot-dependencies.version>
     </properties>
@@ -44,9 +46,27 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!-- 多数据源 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>dynamic-datasource-spring-boot3-starter</artifactId>
+                <version>${dynamic-datasource.version}</version>
+            </dependency>
+            <!-- mybatis-plus -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <!-- framework -->
             <dependency>
                 <groupId>net.kegui</groupId>
                 <artifactId>cc-framework-core</artifactId>
+                <version>${cc-admin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.kegui</groupId>
+                <artifactId>cc-framework-datasource</artifactId>
                 <version>${cc-admin.version}</version>
             </dependency>
         </dependencies>

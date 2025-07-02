@@ -21,6 +21,11 @@
             <groupId>net.kegui</groupId>
             <artifactId>cc-framework-core</artifactId>
         </dependency>
+        <dependency>
+            <groupId>net.kegui</groupId>
+            <artifactId>cc-framework-datasource</artifactId>
+        </dependency>
+
     </dependencies>
     <properties>
         <maven.compiler.source>24</maven.compiler.source>

@@ -14,6 +14,7 @@
     <description>核心框架</description>
     <modules>
         <module>cc-framework-core</module>
+        <module>cc-framework-datasource</module>
     </modules>
 
     <properties>
