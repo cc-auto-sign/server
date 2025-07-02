@@ -1,0 +1,3 @@
+[submodule "cc-framework"]
+	path = cc-framework
+	url = git@github.com:ccccc-admin/cc-framewor.git
