@@ -6,6 +6,11 @@
 [![Redis](https://img.shields.io/badge/Redis-%23DC382D?logo=redis)](https://redis.io/)
 
 > 基于Spring Boot的轻量化敏捷开发框架，具备RBAC权限控制、自动代码生成等核心功能
+---
+## 🧰 核心组件
+[![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.5.3-%236DB33F?logo=springboot)](https://spring.io/projects/spring-boot)
+[![Sa-Token](https://img.shields.io/badge/Sa--Token-1.44.0-%23FF6B6B?logo=java)](https://sa-token.cc/)
+[![MyBatis Plus](https://img.shields.io/badge/MyBatis_Plus-3.5.12-%231a73e8?logo=mybatis)](https://baomidou.com/)
 
 ---
 ## 🚀 快速启动
@@ -19,13 +24,14 @@
 - xxx
 - xxx
 
+---
 ## ✨ 核心特性
 - **模块化架构设计**：前后端分离，支持微服务扩展
 - **高效代码生成器**：一键生成Entity/DAO/Service/Controller基础代码
 - **权限管理体系**：细粒度RBAC权限控制，支持按钮级别权限管理
 - **监控与预警**：集成健康检查、性能监控等运维功能
 - **标准化接口规范**：RESTful API设计，严格的HTTP状态码管理
-
+---
 ## 📡 接口响应规范
 
 ### HTTP状态码映射表
@@ -49,10 +55,58 @@
   "timestamp": 1751508990518
 }
 ```
+---
+
+```mermaid
+erDiagram
+sys_user ||--o{ sys_user_role : "1:N"
+sys_role ||--o{ sys_user_role : "1:N"
+sys_role ||--o{ sys_role_menu : "1:N"
+sys_menu ||--o{ sys_role_menu : "1:N"
+
+    sys_user {
+        BIGINT user_id PK "用户ID"
+        VARCHAR username "登录账号"
+        VARCHAR password "加密密码"
+        VARCHAR nick_name "显示名称"
+        TINYINT status "状态(0停用 1正常)"
+        DATETIME create_time "创建时间"
+    }
+    
+    sys_role {
+        BIGINT role_id PK "角色ID"
+        VARCHAR role_key "角色标识"
+        VARCHAR role_name "角色名称"
+        INTEGER order_num "排序号"
+        DATETIME create_time "创建时间"
+    }
+    
+    sys_user_role {
+        BIGINT id PK "关联ID"
+        BIGINT user_id FK "用户ID"
+        BIGINT role_id FK "角色ID"
+    }
+    
+    sys_menu {
+        BIGINT menu_id PK "菜单ID"
+        VARCHAR menu_name "菜单名称"
+        VARCHAR permission "权限标识"
+        VARCHAR component "前端组件"
+        INTEGER order_num "排序号"
+        BIGINT parent_id "父菜单ID"
+    }
+    
+    sys_role_menu {
+        BIGINT id PK "关联ID"
+        BIGINT role_id FK "角色ID"
+        BIGINT menu_id FK "菜单ID"
+    }
+
+```
 ## 🛠️ 二次开发
 xxxxx
 
-
+---
 ## 📄 许可证
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
