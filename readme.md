@@ -56,7 +56,7 @@ xxxxx
 ## 📄 许可证
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-Copyright (c) 2023 CC-ADMIN Team  
+Copyright (c) 2025 CC-ADMIN Team  
 根据MIT许可证条款，您可以：
 
 ✅ 自由使用、修改代码  
