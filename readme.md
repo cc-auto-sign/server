@@ -56,7 +56,9 @@
 }
 ```
 ---
+## 📐 数据库ER图
 
+### rbac
 ```mermaid
 erDiagram
 sys_user ||--o{ sys_user_role : "1:N"
@@ -103,6 +105,7 @@ sys_menu ||--o{ sys_role_menu : "1:N"
     }
 
 ```
+---
 ## 🛠️ 二次开发
 xxxxx
 

@@ -38,11 +38,11 @@ public class TestController {
         return StpUtil.isLogin();
     }
 
-    // 登录测试
-    @GetMapping("/login")
-    public Object login(){
-        StpUtil.login(10001);
-        return "do sth...";
-    }
+//    // 登录测试
+//    @GetMapping("/login")
+//    public Object login(){
+//        StpUtil.login(10001);
+//        return "do sth...";
+//    }
 
 }

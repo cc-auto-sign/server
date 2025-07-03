@@ -5,6 +5,8 @@ server:
     # 应用的访问路径
     context-path: /
 spring:
+  config:
+    import: optional:classpath:.env[.properties]
   jackson:
     default-property-inclusion: non_null
     time-zone: GMT+8
@@ -24,19 +26,19 @@ spring:
       grace-destroy: false
       datasource:
         master:
-          url: jdbc:mysql://192.168.7.3:3306/cc
-          username: cc
-          password: wangzhen123
+          url: ${DB_URL}
+          username: ${DB_USERNAME}
+          password: ${DB_PASSWORD}
           driver-class-name: com.mysql.cj.jdbc.Driver
   # redis
   data:
     redis:
       database: 1
-      host: 192.168.7.3
+      host: ${REDIS_HOST}
       # Redis服务器连接端口
-      port: 6379
+      port: ${REDIS_PORT}
       # Redis服务器连接密码（默认为空）
-      password: cc123456
+      password: ${REDIS_PASSWORD}
       # 连接超时时间
       timeout: 10s
       lettuce:
