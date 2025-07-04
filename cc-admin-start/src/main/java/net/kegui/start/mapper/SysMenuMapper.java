@@ -11,8 +11,8 @@ import java.util.List;
 public interface SysMenuMapper extends BaseMapper<SysMenu> {
     default List<SysMenu> selectRoleMenuTree(Long roleId) {
         return selectList(new LambdaQueryWrapper<SysMenu>()
-                .inSql(SysMenu::menuId,
+                .inSql(SysMenu::getMenuId,
                         "SELECT menu_id FROM sys_role_menu WHERE role_id = " + roleId)
-                .orderByAsc(SysMenu::orderNum));
+                .orderByAsc(SysMenu::getOrderNum));
     }
 }

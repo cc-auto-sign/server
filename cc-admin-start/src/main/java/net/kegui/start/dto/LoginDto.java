@@ -1,6 +1,7 @@
 package net.kegui.start.dto;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 public record LoginDto(
@@ -12,5 +13,5 @@ public record LoginDto(
     @Size(min = 6, message = "密码长度不能小于6个字符")
     String password
 ) {
-    
+
 }

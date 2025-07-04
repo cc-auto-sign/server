@@ -11,6 +11,6 @@ import java.util.List;
 public interface SysUserRoleMapper extends BaseMapper<SysUserRole> {
     default List<SysUserRole> selectByUserId(Long userId) {
         return selectList(new LambdaQueryWrapper<SysUserRole>()
-                .eq(SysUserRole::userId, userId));
+                .eq(SysUserRole::getUserId, userId));
     }
 }
