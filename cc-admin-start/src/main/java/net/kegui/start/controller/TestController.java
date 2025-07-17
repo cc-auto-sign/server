@@ -1,5 +1,7 @@
 package net.kegui.start.controller;
 
+import cn.dev33.satoken.annotation.SaIgnore;
+import cn.dev33.satoken.secure.BCrypt;
 import cn.dev33.satoken.stp.StpUtil;
 import net.kegui.framework.core.api.annotation.OriginalResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,15 +17,19 @@ public class TestController {
 
     // 会被Advice包装
     @GetMapping("/")
+    @SaIgnore
     public String test(){
-        return "Test";
+        String rawPassword = "123456";
+        String hashedPassword = BCrypt.hashpw(rawPassword);
+
+        return hashedPassword;
     }
 
     // 不被Advice包装
     @GetMapping("/test")
     @OriginalResponse
     public String test2(){
-        return "Test2";
+       return "Test2";
     }
 
     // 测试db
@@ -44,5 +50,6 @@ public class TestController {
 //        StpUtil.login(10001);
 //        return "do sth...";
 //    }
+
 
 }

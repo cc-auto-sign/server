@@ -3,6 +3,8 @@ package net.kegui.start.controller;
 import cn.dev33.satoken.annotation.SaIgnore;
 import cn.dev33.satoken.stp.StpUtil;
 import jakarta.validation.Valid;
+import net.kegui.framework.security.domain.LoginUser;
+import net.kegui.framework.security.utils.SecurityUtils;
 import net.kegui.start.dto.LoginDto;
 import net.kegui.start.service.LoginService;
 import net.kegui.start.vo.LoginVo;
@@ -33,4 +35,8 @@ public class LoginController {
         return loginService.login(loginDto);
     }
 
+    @GetMapping("userInfo")
+    public LoginUser userInfo(){
+        return SecurityUtils.getLoginUser();
+    }
 }

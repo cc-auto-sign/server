@@ -17,6 +17,9 @@ spring:
         max-file-size: 10MB
         # 设置总上传的文件大小
         max-request-size: 20MB
+  # 配置mybatis-plus XML文件扫描
+  mybatis-plus:
+    mapper-locations: classpath*:mapper/**/*.xml
   # 数据源
   datasource:
     dynamic:

@@ -1,6 +1,5 @@
 package net.kegui.start.service.impl;
 
-import cn.dev33.satoken.exception.NotLoginException;
 import cn.dev33.satoken.secure.BCrypt;
 import cn.dev33.satoken.stp.StpUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
@@ -9,24 +8,33 @@ import net.kegui.framework.security.domain.LoginUser;
 import net.kegui.framework.security.enums.DeviceType;
 import net.kegui.framework.security.utils.SecurityUtils;
 import net.kegui.start.dto.LoginDto;
+import net.kegui.start.entity.SysMenu;
+import net.kegui.start.entity.SysRole;
 import net.kegui.start.entity.SysUser;
+import net.kegui.start.mapper.SysMenuMapper;
+import net.kegui.start.mapper.SysRoleMapper;
 import net.kegui.start.mapper.SysUserMapper;
 import net.kegui.start.service.LoginService;
 import net.kegui.start.vo.LoginVo;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 
 @Service
 public class LoginServiceImpl implements LoginService {
 
     final SysUserMapper sysUserMapper;
+    final SysRoleMapper roleMapper;
+    final SysMenuMapper menuMapper;
 
-    public LoginServiceImpl(SysUserMapper sysUserMapper) {
+    public LoginServiceImpl(SysUserMapper sysUserMapper, SysRoleMapper roleMapper, SysMenuMapper menuMapper) {
         this.sysUserMapper = sysUserMapper;
+        this.roleMapper = roleMapper;
+        this.menuMapper = menuMapper;
     }
 
     @Override
@@ -68,7 +76,19 @@ public class LoginServiceImpl implements LoginService {
     private LoginUser buildLoginUser(SysUser sysUser) {
         LoginUser loginUser = new LoginUser();
         BeanUtils.copyProperties(sysUser,loginUser);
-        // 查询权限等相关信息, 插入到loginUser内
+
+        List<SysRole> roles = roleMapper.selectRolesByUserId(sysUser.getUserId());
+        loginUser.setRoles(roles);
+
+        List<Long> roleIds = roles.stream().map(SysRole::getRoleId).toList();
+        if (!roleIds.isEmpty()) {
+            Set<String> permissions = menuMapper.selectPermissionsByRoleIds(roleIds);
+            loginUser.setPermissions(permissions);
+
+            // 查询菜单信息
+            List<SysMenu> menus = menuMapper.selectMenusByRoleIds(roleIds);
+            loginUser.setMenus(menus);
+        }
 
         return loginUser;
     }
