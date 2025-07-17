@@ -58,17 +58,17 @@ sequenceDiagram
 ## 主要功能
 
 ### 仪表盘
-![仪表盘截图](https://github.com/cc-auto-sign/front-end/blob/master/docs/docs/home.png)
+![仪表盘截图](https://raw.githubusercontent.com/cc-auto-sign/front-end/refs/heads/master/docs/home.png)
 
 ### 插件商店
-![插件商店截图](https://github.com/cc-auto-sign/front-end/blob/master/docs/docs/store.png)
+![插件商店截图](https://raw.githubusercontent.com/cc-auto-sign/front-end/refs/heads/master/docs/store.png)
 
 ### 任务管理
-![任务管理截图](https://github.com/cc-auto-sign/front-end/blob/master/docs/docs/task.png)
-![任务管理截图](https://github.com/cc-auto-sign/front-end/blob/master/docs/docs/task2.png)
+![任务管理截图](https://raw.githubusercontent.com/cc-auto-sign/front-end/refs/heads/master/docs/task.png)
+![任务管理截图](https://raw.githubusercontent.com/cc-auto-sign/front-end/refs/heads/master/docs/task2.png)
 
 ### 节点管理
-![节点管理截图](https://github.com/cc-auto-sign/front-end/blob/master/docs/docs/node.png)
+![节点管理截图](https://raw.githubusercontent.com/cc-auto-sign/front-end/refs/heads/master/docs/node.png)
 
 ### 日志查看
-![日志查看](https://github.com/cc-auto-sign/front-end/blob/master/docs/docs/log.png)
+![日志查看](https://raw.githubusercontent.com/cc-auto-sign/front-end/refs/heads/master/docs/log.png)
