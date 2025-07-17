@@ -1,125 +1,74 @@
-# CC-ADMIN 敏捷开发框架
+# cc-auto-sign-server cc-auto-sign的后端服务
 
-[![MySQL 5.7](https://img.shields.io/badge/MySQL-5.7-%234479A1?logo=mysql)](https://dev.mysql.com/)
-[![JDK 24](https://img.shields.io/badge/JDK-24-%23038b1c?logo=openjdk)](https://openjdk.org/)
-[![CentOS 7](https://img.shields.io/badge/CentOS-7-%23A30044?logo=centos)](https://www.centos.org/)
-[![Redis](https://img.shields.io/badge/Redis-%23DC382D?logo=redis)](https://redis.io/)
+一个基于React 19和Ant Design 5构建的现代化签到管理系统，使用Vite作为构建工具。
 
-> 基于Spring Boot的轻量化敏捷开发框架，具备RBAC权限控制、自动代码生成等核心功能
----
-## 🧰 核心组件
-[![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.5.3-%236DB33F?logo=springboot)](https://spring.io/projects/spring-boot)
-[![Sa-Token](https://img.shields.io/badge/Sa--Token-1.44.0-%23FF6B6B?logo=java)](https://sa-token.cc/)
-[![MyBatis Plus](https://img.shields.io/badge/MyBatis_Plus-3.5.12-%231a73e8?logo=mybatis)](https://baomidou.com/)
+## 写在前面
+目前还没有完成，只是把页面实现了，agent写完了，这个页面的服务端还在写。
 
----
-## 🚀 快速启动
-
-### 前置要求
-- xxx
-- xxx
-- xxx
-### 配置指南
-- xxx
-- xxx
-- xxx
-
----
-## ✨ 核心特性
-- **模块化架构设计**：前后端分离，支持微服务扩展
-- **高效代码生成器**：一键生成Entity/DAO/Service/Controller基础代码
-- **权限管理体系**：细粒度RBAC权限控制，支持按钮级别权限管理
-- **监控与预警**：集成健康检查、性能监控等运维功能
-- **标准化接口规范**：RESTful API设计，严格的HTTP状态码管理
----
-## 📡 接口响应规范
-
-### HTTP状态码映射表
-| HTTP Status | Body Code | 说明                     | 典型场景               |
-|-------------|-----------|--------------------------|-----------------------|
-| 200         | 200       | 请求成功                 | 正常业务响应           |
-| 400         | 400       | 参数校验失败             | JSON格式错误/必填字段缺失 |
-| 401         | 401       | 身份认证失败             | Token过期/无效Token    |
-| 403         | 403       | 访问权限不足             | 接口权限未授予          |
-| 404         | 404       | 资源不存在               | 无效API路径           |
-| 500         | 500       | 系统内部错误             | 未捕获异常/NPE错误     |
-
-### 标准响应结构
-```json
-{
-  "code": 200,
-  "msg": "success",
-  "data": {
-    // 业务数据内容
-  },
-  "timestamp": 1751508990518
-}
-```
----
-## 📐 数据库ER图
-
-### rbac
+## 目前的想法
+### 架构图
 ```mermaid
-erDiagram
-sys_user ||--o{ sys_user_role : "1:N"
-sys_role ||--o{ sys_user_role : "1:N"
-sys_role ||--o{ sys_role_menu : "1:N"
-sys_menu ||--o{ sys_role_menu : "1:N"
+graph TD
+    subgraph 应用商店端
+        A[插件市场] --> B[插件审核]
+        A --> C[版本管理]
+    end
 
-    sys_user {
-        BIGINT user_id PK "用户ID"
-        VARCHAR username "登录账号"
-        VARCHAR password "加密密码"
-        VARCHAR nick_name "显示名称"
-        TINYINT status "状态(0停用 1正常)"
-        DATETIME create_time "创建时间"
-    }
-    
-    sys_role {
-        BIGINT role_id PK "角色ID"
-        VARCHAR role_key "角色标识"
-        VARCHAR role_name "角色名称"
-        INTEGER order_num "排序号"
-        DATETIME create_time "创建时间"
-    }
-    
-    sys_user_role {
-        BIGINT id PK "关联ID"
-        BIGINT user_id FK "用户ID"
-        BIGINT role_id FK "角色ID"
-    }
-    
-    sys_menu {
-        BIGINT menu_id PK "菜单ID"
-        VARCHAR menu_name "菜单名称"
-        VARCHAR permission "权限标识"
-        VARCHAR component "前端组件"
-        INTEGER order_num "排序号"
-        BIGINT parent_id "父菜单ID"
-    }
-    
-    sys_role_menu {
-        BIGINT id PK "关联ID"
-        BIGINT role_id FK "角色ID"
-        BIGINT menu_id FK "菜单ID"
-    }
+    subgraph 客户端
+        D[插件管理] --> E[账号配置]
+        F[任务调度中心] -->|分发任务| G[Agent1]
+        F -->|分发任务| H[Agent2]
+        I[日志中心] --> J[日志聚合]
+    end
 
+    subgraph Agent端
+        G --> K[接收任务]
+        K --> L[执行脚本]
+        H --> M[接收任务]
+        M --> N[执行脚本]
+        L -->|结果| J
+        N -->|结果| J
+    end
+
+    L -->|访问| O[目标平台]
+    N -->|访问| O
 ```
----
-## 🛠️ 二次开发
-xxxxx
 
----
-## 📄 许可证
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+### 任务下发时序图
+```mermaid
+sequenceDiagram
+    participant 客户端
+    participant Agent
+    participant 目标平台
 
-Copyright (c) 2025 CC-ADMIN Team  
-根据MIT许可证条款，您可以：
+    客户端->>Agent: 直接下发任务（含插件脚本和参数）
+    activate Agent
+    Agent->>目标平台: 执行签到（调用插件脚本）
+    activate 目标平台
+    目标平台-->>Agent: 返回签到结果
+    deactivate 目标平台
+    Agent-->>客户端: 上报日志和状态
+    deactivate Agent
+```
 
-✅ 自由使用、修改代码  
-✅ 用于商业项目  
-✅ 进行再分发  
+## 项目概述
 
-附加条件：  
-📌 **必须保留原始版权声明**  
-📌 **必须包含许可证文件副本**  
+突发奇想打算做一个插件化的自动签到系统，由开发者维护插件商店，其他人可自行上传写好的签到插件，又多个node节点去执行签到任务（需自行部署node节点），这样不同签到任务可以用不同地区的服务器来签到。
+
+## 主要功能
+
+### 仪表盘
+![仪表盘截图](https://github.com/cc-auto-sign/front-end/blob/master/docs/docs/home.png)
+
+### 插件商店
+![插件商店截图](https://github.com/cc-auto-sign/front-end/blob/master/docs/docs/store.png)
+
+### 任务管理
+![任务管理截图](https://github.com/cc-auto-sign/front-end/blob/master/docs/docs/task.png)
+![任务管理截图](https://github.com/cc-auto-sign/front-end/blob/master/docs/docs/task2.png)
+
+### 节点管理
+![节点管理截图](https://github.com/cc-auto-sign/front-end/blob/master/docs/docs/node.png)
+
+### 日志查看
+![日志查看](https://github.com/cc-auto-sign/front-end/blob/master/docs/docs/log.png)
